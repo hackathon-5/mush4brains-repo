@@ -1,0 +1,100 @@
+{
+  "InventoryType":1,
+	"InventoryName":"Early Development and Home Background",
+	"AgeGroup":"Ages 6 to 17",
+	"ByWhom":"Parents of Child",
+	"Questions":
+		[
+			{
+				"Category": "Early Development",
+				"Number": 1,
+				"Question": "Was he/she born before he/she was due (premature)?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Development",
+				"Number": 2,
+				"Question": "Were the doctors worried about his/her medical condition immediately after he/she was born?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Development",
+				"Number": 3,
+				"Question": "Did he/she have to spend any time in a neonatal intensive care unit (NICU)?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Development",
+				"Number": 4,
+				"Question": "Could he/she walk on his/her own by the age of 18 months?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Development",
+				"Number": 5,
+				"Question": "Has he/she ever had a seizure?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Development",
+				"Number": 6,
+				"Question": "Did he/she ever lose consciousness for more than a few minutes after an accident?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Communication",
+				"Number": 7,
+				"Question": "By the time he/she was age 2; could he/she put several words together when speaking?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Communication",
+				"Number": 8,
+				"Question": "Could people who didn’t know him/her understand his/her speech by the time he/she reached age 4?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Communication",
+				"Number": 9,
+				"Question": "Have you ever been concerned about his/her hearing or eyesight?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			},
+			{
+				"Category": "Early Communication",
+				"Number": 10,
+				"Question": "By the time he/she was age 4; was he/she interested in playing with or being with other children?",
+				"ResponseA": "No",
+				"ResponseB": "Yes",
+				"ResponseC": "Cannot Remember",
+				"ResponseD": "Do not Know"
+			}
+		]
+
+}

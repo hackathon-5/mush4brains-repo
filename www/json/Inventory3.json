@@ -1,0 +1,185 @@
+{
+	"InventoryType":2,
+	"InventoryName":"Level 1 Cross-Cutting Symptom Measure",
+	"AgeGroup":"Ages 11 to 17",
+	"ByWhom":"Parents of Child",
+	"Questions":
+		[
+			{
+				"Category":"I",
+				"Id":1,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Complained of stomachaches, headaches, or other aches and pains?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"I",
+				"Id":2,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said he/she was worried about his/her health or about getting sick?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"II",
+				"Id":3,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Had problems sleeping—that is, trouble falling asleep, staying asleep, or waking up too early?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"III",
+				"Id":4,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Had problems paying attention when he/she was in class or doing his/her homework or reading a book or playing a game?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"IV",
+				"Id":5,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Had less fun doing things than he/she used to?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"IV",
+				"Id":6,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Seemed sad or depressed for several hours?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"V and VI",
+				"Id":7,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Seemed more irritated or easily annoyed than usual?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"V and VI",
+				"Id":8,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Seemed angry or lost his/her temper?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"VII",
+				"Id":9,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Started lots more projects than usual or did more risky things than usual?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"VII",
+				"Id":10,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Slept less than usual for him/her, but still had lots of energy?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"VIII",
+				"Id":11,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said he/she felt nervous, anxious, or scared?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"VIII",
+				"Id":12,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Not been able to stop worrying?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"VIII",
+				"Id":13,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said he/she couldn’t do things he/she wanted to or should have done, because they made him/her feel nervous?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"IX",
+				"Id":14,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said that he/she heard voices—when there was no one there—speaking about him/her or telling him/her what to do or saying bad things to him/her?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"IX",
+				"Id":15,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said that he/she had a vision when he/she was completely awake—that is, saw something or someone that no one else could see?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"X",
+				"Id":16,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said that he/she had thoughts that kept coming into his/her mind that he/she would do something bad or that something bad would happen to him/her or to someone else?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"X",
+				"Id":17,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said he/she felt the need to check on certain things over and over again, like whether a door was locked or whether the stove was turned off?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"X",
+				"Id":18,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Seemed to worry a lot about things he/she touched being dirty or having germs or being poisoned?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"X",
+				"Id":19,
+				"Question":"During the past TWO (2) WEEKS, how much (or how often) has your child… Said that he/she had to do things in a certain way, like counting or saying special things out loud, in order to keep something bad from happening?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XI",
+				"Id":20,
+				"Question":"In the past TWO (2) WEEKS, has your child … Had an alcoholic beverage (beer, wine, liquor, etc.)?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XI",
+				"Id":21,
+				"Question":"In the past TWO (2) WEEKS, has your child … Smoked a cigarette, a cigar, or pipe, or used snuff or chewing tobacco?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XI",
+				"Id":22,
+				"Question":"In the past TWO (2) WEEKS, has your child … Used drugs like marijuana, cocaine or crack, club drugs (like ecstasy), hallucinogens (like LSD), heroin, inhalants or solvents (like glue), or methamphetamine (like speed)?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XI",
+				"Id":23,
+				"Question":"In the past TWO (2) WEEKS, has your child … Used any medicine without a doctor’s prescription (e.g., painkillers [like Vicodin], stimulants [like Ritalin or Adderall], sedatives or tranquilizers [like sleeping pills or Valium], or steroids)?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XII",
+				"Id":24,
+				"Question":"In the past TWO (2) WEEKS, has he/she talked about wanting to kill himself/herself or about wanting to commit suicide?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			},
+			{
+				"Category":"XII",
+				"Id":25,
+				"Question":"Has he/she EVER tried to kill himself/herself?",
+				"Answers":[{"Response":"None"},{"Response":"Slight"},{"Response":"Mild"},{"Response":"Moderate"},{"Response":"Severe"}],
+				"Answer":""
+			}
+		]
+}
+

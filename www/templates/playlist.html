@@ -1,0 +1,28 @@
+<ion-view view-title="{{title}}">
+  <ion-content ng-init="status='Save'">
+  <div class="card" ng-repeat="q in questions.qs">
+    <div class="item item-divider item-text-wrap" ng-class="">
+      {{q.prompt}} (Question {{q.id}} of {{questions.qs.length}})
+    </div>
+    <form name="save{{q.id}}" novalidate>
+    <div ng-repeat="a in q.answers" class="border-bottem">
+
+      <ion-radio name='group' required ng-model="q.answer" ng-value="a.text">{{a.text}}</ion-radio>
+    </div>
+    <div class="padding">
+          <input ng-disabled="" class="button button-block button-balanced" ng-class="" type="submit" ng-click="submit(q.answer, q.id); status='Saved!'" ng-value="status">
+    </div>
+  </form>
+  </div>
+  <!-- <p>
+    {{Score.ec_risk}}
+  </p>
+  <p>
+  {{Score.ed_risk}}
+  </p> -->
+  <!-- <button id='Evaluate' class="button button-block button-balanced" ng-click="evaluate(questions)">
+    Evaluate
+  </button> -->
+  <a class="button button-block button-balanced" ng-click="evaluate(questions.qs)" ng-href="#/app/playlists/{{title}}/end">Contenue!</a>
+  </ion-content>
+</ion-view>

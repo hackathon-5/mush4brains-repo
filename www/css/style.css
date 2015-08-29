@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+.border-bottem {
+  margin: 5px;
+  border-bottom: dotted 2px;
+  border-color: #00DD00;
+}
+
+.has-error{
+  color: red;
+}
+
+.item-divider {
+    background-color: #CCFFCC;
+    color: #222;
+    font-weight: 500;
+    min-height: 30px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}

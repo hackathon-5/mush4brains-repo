@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ian/Workspace/hak5/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="77d57d5fb7620c7779f9110f305c151a35b63586">
+        <dex dex="/home/ian/Workspace/hak5/platforms/android/build/intermediates/pre-dexed/debug/classes-41af94b1d034f86e87eb01f48d8de9eb32ab67a7.jar" />
+    </item>
+
+</items>

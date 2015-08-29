@@ -1,0 +1,130 @@
+{
+	"InventoryType":2,
+	"InventoryName":"Level 2 - Substance Use",
+	"AgeGroup":"Ages 11 to 17",
+	"ByWhom":"Parents of Child",
+	"Questions":
+		[
+			{
+				"Category":"NA",
+				"Id":1,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child …  Have an alcoholic beverage (beer, wine, liquor, etc.)?",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":2,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child …  Have 4 or more drinks in a single day? ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":3,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child …   Smoke a cigarette, a cigar, or pipe or used snuff or chewing tobacco? ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":4,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following medicines without a doctor’s prescription or in greater amounts or longer than prescribed?  Painkillers (like Vicodin) ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":5,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following medicines without a doctor’s prescription or in greater amounts or longer than prescribed?  Stimulants (like Ritalin, Adderall) ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":6,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following medicines without a doctor’s prescription or in greater amounts or longer than prescribed?  Sedatives or  tranquilizers (like sleeping pills or Valium",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":7,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like:  Steroids ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":8,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like: Other medicines",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":9,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like: Marijuana",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":10,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like: Cocaine or crack",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":11,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like:  Club drugs (like ecstasy) ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":12,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like:  Hallucinogens (like LSD) ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":13,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like: Heroin",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":14,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like:  Inhalants or solvents (like glue) ",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			},
+			{
+				"Category":"NA",
+				"Id":15,
+				"Question":"During the past TWO (2) WEEKS, about how often did your child use any of the following drugs like: Methamphetamine (like speed)",
+				"Answers":[{"Response":"Not at all"},{"Response":"Less Than a Day or Two"},{"Response":"Several Days"},{"Response":"More Than Half the Days"},{"Response":"Nearly Every Day"},
+{"Response":"Do not Know"}],
+				"Answer":""
+			}
+		]
+}
+

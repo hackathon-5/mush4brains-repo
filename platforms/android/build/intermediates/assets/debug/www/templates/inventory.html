@@ -1,0 +1,15 @@
+<<ion-view view-title="title">
+  <ion-content>
+    <h1>{{id}}</h1>
+    <ion-list>
+      <ion-item ng-repeat="q in questions">
+        {{q.prompt}}
+        <ion-list ng-repeat="a in q.answers">
+          <ion-item>
+            {{a.text}}
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,2 @@
+/home/ian/Workspace/hak5/platforms/android/build/intermediates/classes/debug
+/home/ian/Workspace/hak5/platforms/android/build/intermediates/pre-dexed/debug/classes-41af94b1d034f86e87eb01f48d8de9eb32ab67a7.jar
