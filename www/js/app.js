@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/email',
       views: {
         'menuContent': {
-          templateUrl: 'templates/email.html'
+          templateUrl: 'templates/email.html/{{ec_risk}}/{{ed_risk}}'
         }
       }
     })
@@ -85,7 +85,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
     .state('app.single2', {
-      url: '/playlists/{playlistTitle}/end',
+      url: '/playlists/{playlistTitle}/{inventoryScore}/end',
       views: {
         'menuContent': {
           templateUrl: 'templates/playlist2.html',

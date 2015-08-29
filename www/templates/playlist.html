@@ -14,15 +14,17 @@
     </div>
   </form>
   </div>
-  <!-- <p>
+  <p>
     {{Score.ec_risk}}
   </p>
   <p>
   {{Score.ed_risk}}
-  </p> -->
-  <!-- <button id='Evaluate' class="button button-block button-balanced" ng-click="evaluate(questions)">
+  </p>
+  <button id='Evaluate' class="button button-block button-balanced" ng-click="evaluate(questions)">
     Evaluate
-  </button> -->
-  <a class="button button-block button-balanced" ng-click="evaluate(questions.qs)" ng-href="#/app/playlists/{{title}}/end">Contenue!</a>
+  </button>
+  <div ng-controller="EmailCtrl as email" >
+    <a class="button button-block button-balanced" ng-click="email.sendFeedback()">Share!</a>
+  </div>
   </ion-content>
 </ion-view>

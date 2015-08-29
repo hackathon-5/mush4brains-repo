@@ -1,5 +1,9 @@
 <ion-view view-title="My Inventories">
   <ion-content>
-    
+    <ion-list>
+      <ion-item ng-repeat="inv in inventories" href="#/app/inventories/{{inv.id}}">
+        {{inv.title}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

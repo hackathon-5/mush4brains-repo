@@ -1,14 +1,14 @@
 angular.module('starter.controllers', [])
 
 .controller('EmailCtrl', function($scope){
-  $scope.sendFeedback= function(body, email) {
+  $scope.sendFeedback= function() {
        if(window.plugins && window.plugins.emailComposer) {
            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
                console.log("Response -> " + result);
            },
            "Mental Health Inventory Results", // Subject
-           body,                      // Body
-           [email],    // To
+           'helloworld',                      // Body
+           ['icfeeley@gmail.com'],    // To
            null,                    // CC
            null,                    // BCC
            false,                   // isHTML
@@ -62,9 +62,9 @@ angular.module('starter.controllers', [])
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Autism Spectrum Disorder', id: 1 },
-    // { title: 'some', id: 2 },
-    // { title: 'other', id: 3 },
-    // { title: 'inventories', id: 4 },
+    { title: 'Severity of Posttraumatic Stress Symptoms', id: 2 },
+    { title: 'Level 1 Cross-Cutting Symptom Measure', id: 3 },
+    { title: 'Level 2 - Substance Use', id: 4 },
     // { title: 'so', id: 5 },
     // { title: 'yeah', id: 6 }
   ];
@@ -103,32 +103,134 @@ angular.module('starter.controllers', [])
 
 .controller('InventoryCtrl', function($scope, $stateParams) {
   $scope.title = $stateParams.playlistTitle;
+  $scope.questions = {'qs':[
+    {"Category": "Early Development", "id" : 1, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    {"Category": "Early Development", "id" : 2, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+    // {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+
+  ]};
+  if ($scope.title === "Autism Spectrum Disorder"){
+    $scope.questions = {'qs':[
+      {"Category": "Early Development", "id" : 1, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 2, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+
+    ]};
+  }
+  else if ($scope.title ==="Severity of Posttraumatic Stress Symptoms"){
+    $scope.questions = {'qs':[
+      {"Category": "Early Development", "id" : 1, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 2, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 11, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 12, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 13, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 14, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 15, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 16, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 17, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 18, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 19, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 20, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+
+    ]};
+  }
+
+  else if ($scope.title ==="Level 1 Cross-Cutting Symptom Measure"){
+    $scope.questions = {'qs':[
+      {"Category": "Early Development", "id" : 1, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 2, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 11, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 12, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 13, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Development", "id" : 14, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 17, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 18, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 19, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+      {"Category": "Early Communication", "id" : 20, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+
+    ]};
+  }
+
+
+    else if ($scope.title ==="Level 2 - Substance Use"){
+      $scope.questions = {'qs':[
+        {"Category": "Early Development", "id" : 1, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 2, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 11, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 12, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 13, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Development", "id" : 14, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 17, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 18, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 19, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+        {"Category": "Early Communication", "id" : 20, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+
+      ]};
+    }
   // $scope.questions = [];
   // $http.get('appdata/file.json')
   //   .success(function (data) {
   //       // The json data will now be in scope.
   //       $scope.questions = data;
   //   });
-  $scope.questions = [
-    {"Category": "Early Development", "id" : 1, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Development", "id" : 2, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-    {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
-
-  ];
+  // $scope.questions = [
+  //   {"Category": "Early Development", "id" : 1, "prompt": 'Was he/she born before he/she was due (premature)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   {"Category": "Early Development", "id" : 2, "prompt": 'Were the doctors worried about his/her medical condition immediately after he/she was born?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   {"Category": "Early Development", "id" : 3, "prompt": 'Did he/she have to spend any time in a neonatal intensive care unit (NICU)?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Development", "id" : 4, "prompt": 'Could he/she walk on his/her own by the age of 18 months?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Development", "id" : 5, "prompt": 'Has he/she ever had a seizure?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Development", "id" : 6, "prompt": 'Did he/she ever lose consciousness for more than a few minutes after an accident?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Communication", "id" : 7, "prompt": 'By the time he/she was age 2; could he/she put several words together when speaking?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Communication", "id" : 8, "prompt": 'ould people who didnt know him/her understand his/her speech by the time he/she reached age 4?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Communication", "id" : 9, "prompt": 'Have you ever been concerned about his/her hearing or eyesight?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //   // {"Category": "Early Communication", "id" : 10, "prompt": 'By the time he/she was age 4; was he/she interested in playing with or being with other children?', "type" : 'graduated','answer':'', 'answers' : [{'text':'No'},{'text':'Cannot Remember'},{'text':'Do not know'},{'text':'Yes'}]},
+  //
+  // ];
   $scope.formData = {}
   $scope.getQs = function(){
     return null;
   };
   $scope.Score = {ed: 0, ed_risk: '', ec_risk : '', ed: 0};
   $scope.submit = function(newAnswer, id){
-    $scope.questions[id-1].answer = newAnswer;
+    $scope.questions.qs[id-1].answer = newAnswer;
   };
   $scope.evaluate = function(qs){
     $scope.Score.ed = 0;

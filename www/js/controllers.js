@@ -1,14 +1,14 @@
 angular.module('starter.controllers', [])
 
 .controller('EmailCtrl', function($scope){
-  $scope.sendFeedback= function(body, email) {
+  $scope.sendFeedback= function() {
        if(window.plugins && window.plugins.emailComposer) {
            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
                console.log("Response -> " + result);
            },
            "Mental Health Inventory Results", // Subject
-           body,                      // Body
-           [email],    // To
+           'helloworld',                      // Body
+           ['icfeeley@gmail.com'],    // To
            null,                    // CC
            null,                    // BCC
            false,                   // isHTML
